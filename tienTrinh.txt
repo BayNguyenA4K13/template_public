@@ -1,0 +1,10 @@
+-Thanh bar tim kiem.
+
+- tieu đề nhóm sp (nhóm khuyễn mãi): font chữ giống duloling o Cay ki năng Tieng Anh, bên kia có nút xem thêm
+- Tạo i tem san pham, 
+   + top: ten sp
+   +mid: hinh anh+ relative thogn tin giam gia
+   +bot: price
+
+
+

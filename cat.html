@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Quản lí</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="css/reset_css.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/style_cat.css">
+</head>
+<body style="background: #e9e9e9 !important">
+	<div class="container">
+		<div class="header">
+			<div class="nav_bar" style="background: #2ba9e5 !important">
+				<a href="#"><img id="img_logo" src="images/logo_public.png" ></a>
+				<div id="command_top">
+					<a href="#" class="nav_bar_name">Trang chủ</a>
+					<a href="#" class="nav_bar_name">Giới thiệu</a>
+					<a href="#" class="nav_bar_name">Liên hệ</a>
+				</div>	
+
+				<div id="command_auth">
+					<a href="#" class="hello">Xin chào</a>
+					<a href="#" class="hello">Admin</a>
+				</div>
+			</div>
+		</div>
+
+		<!-- <div class="clr"></div> -->
+
+		<div class="leftbar">
+			<style type="text/css">
+				.khung{
+					background: white;
+				}
+				.muc_chinh{
+					background: white;
+				}
+			</style>
+
+			<div class="khung">
+				<div class="muc_chinh">
+					<span>→ Quản trị</span>
+				</div>
+				<div class="muc_phu">
+					<ul>
+						<li ><a>Quản lí sản phẩm </a></li>
+						<li ><a>Quản lí danh mục</a></li>
+						<li class="active"><a>Quản lí liên hệ</a></li>
+						<li><a>Quản lí slide</a></li>
+						<li><a>Quản lí user</a></li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="khung">
+				<div class="muc_chinh">
+					<span>→ Tùy chỉnh giao diện</span>
+				</div>
+				<div class="muc_phu">
+					<ul>
+						<li  class="active"><a>Đổi logo</a></li>
+						<li><a>Đổi màu nền trang</a></li>
+						<li><a>Đổi màu khung trái</a></li>
+						<li><a>Đổi màu khung giữa</a></li>
+						<li><a>Đổi màu khung nar-bar</a></li>
+						<li><a>Đổi màu khung trên cùng bên phải</a></li>
+						<li><a>Đổi màu khung dưới cùng</a></li>
+					</ul>
+				</div>
+			</div>
+
+			
+			
+		</div>
+
+
+
+		<div class="content" style="background: white">
+			<h1>Quản lí danh mục</h1>
+			<div class="them_and_tk">
+				<button class="button btn_them">Thêm danh mục</button>
+			
+				<form class="search_form">
+					<input type="text" placeholder="Nhập từ khóa" name="key_search" class="txt_field">
+					<input type="submit" name="submit" class="button" value="Tìm kiếm">
+				</form>
+
+			</div>
+			
+			<hr />
+
+
+			<div class="msg">
+				<p class="active">Thêm thành công!</p>
+			</div>
+
+
+			<div class="header_table">
+				Danh sách danh mục
+			</div>
+
+			<table border="1">
+				<thead>
+					<tr>
+						<th>ID</th>
+						<th>Tên danh mục</th>
+						<th>Active</th>
+						<th>Action</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>1</td>
+						<td>Điện thoại</td>
+						<td>Đang buôn bán</td>
+						<td>
+							<img src="images/del_icon.png"><a href="#">Xóa</a>
+							<span class="span_kc">|</span>
+							<img src="images/edit_icon.png"><a href="#">Sửa</a>
+						</td>
+					</tr>
+					<tr>
+						<td>1</td>
+						<td>Điện thoại</td>
+						<td>Đang buôn bán</td>
+						<td>
+							<img src="images/del_icon.png"><a href="#">Xóa</a>
+							<span class="span_kc">|</span>
+							<img src="images/edit_icon.png"><a href="#">Sửa</a>
+						</td>
+					</tr>
+					<tr>
+						<td>1</td>
+						<td>Điện thoại</td>
+						<td>Đang buôn bán</td>
+						<td>
+							<img src="images/del_icon.png"><a href="#">Xóa</a>
+							<span class="span_kc">|</span>
+							<img src="images/edit_icon.png"><a href="#">Sửa</a>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<div class="phan_trang">
+				paginate here 1  2  3  4
+			</div>
+			
+			
+		</div>
+
+
+		<div class="clr"></div>
+
+		<div class="footer">
+			<p style="background: white">MiniMark - Code by Bay Nguyen 2018<br>
+				University of Science and Technology - University of Danang<br>
+				Server time: 16/01/2019 00:17:15 (UTC+7)<br>
+			</p>
+		</div>
+
+
+	</div>
+
+</body>
+</html>

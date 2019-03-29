@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Index</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="css/reset_css.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/style_index.css">
+</head>
+<body style="background: #e9e9e9 !important">
+	<div class="container">
+		<div class="header">
+			<div class="nav_bar" style="background: #2ba9e5 !important">
+				<a href="#"><img id="img_logo" src="images/logo_public.png" ></a>
+				<div id="command_top">
+					<a href="#" class="nav_bar_name active_menu">Trang chủ</a>
+					<a href="#" class="nav_bar_name">Giới thiệu</a>
+					<a href="#" class="nav_bar_name">Liên hệ</a>
+				</div>	
+
+				<div id="command_auth">
+					<a href="#" class="hello">Xin chào</a>
+					<a href="#" class="hello">Admin</a>
+				</div>
+			</div>
+		</div>
+
+		<div class="clr"></div>
+
+
+
+		<div class="leftbar">
+			<style type="text/css">
+				.khung{
+					background: white !important;
+				}
+				.muc_chinh{
+					background: white !important;
+				}
+			</style>
+
+
+			<!--BEGIN Thanh sidebar tim kiem -->
+            <div class="khung">
+				<div class="muc_chinh">
+					<span>→ Tìm kiếm trên trang</span>
+				</div>
+				<div class="muc_phu">
+					<form class="form_tk">
+                        <input type="text" class="txt_field key" placeholder="Nhập gì đó..."/>
+                        <input type="submit" value="Search" class="button"/>
+                    </form>
+				</div>
+			</div>
+			<!--ENDThanh sidebar tim kiem -->
+
+
+			<div class="khung">
+				<div class="muc_chinh">
+					<span>→ Quản trị</span>
+				</div>
+				<div class="muc_phu">
+					<ul>
+						<li ><a>Quản lí sản phẩm </a></li>
+						<li class="active"><a>Quản lí danh mục</a></li>
+						<li><a>Quản lí liên hệ</a></li>
+						<li><a>Quản lí slide</a></li>
+						<li><a>Quản lí user</a></li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="khung">
+				<div class="muc_chinh">
+					<span>→ Tùy chỉnh giao diện</span>
+				</div>
+				<div class="muc_phu">
+					<ul>
+						<li  class="active"><a>Đổi logo</a></li>
+						<li><a>Đổi màu nền trang</a></li>
+						<li><a>Đổi màu khung trái</a></li>
+						<li><a>Đổi màu khung giữa</a></li>
+						<li><a>Đổi màu khung nar-bar</a></li>
+						<li><a>Đổi màu khung trên cùng bên phải</a></li>
+						<li><a>Đổi màu khung dưới cùng</a></li>
+						<li><a>Đổi màu header khung</a></li>
+					</ul>
+				</div>
+			</div>
+			
+		</div>
+
+		
+
+		<div class="content" style="background: white !important">
+
+			<!-- Slide Index-->
+
+			<style>
+				.mySlides {display: none; text-align: center;}
+				img {vertical-align: middle;}
+
+				/* Slideshow container */
+				.slideshow-container {
+					max-width: 1000px;
+					position: relative;
+					margin: auto;
+					background: rgba(0,0,0,0.8);
+				}
+
+				/* Next & previous buttons */
+				.prev, .next {
+					cursor: pointer;
+					position: absolute;
+					top: 50%;
+					width: auto;
+					padding: 16px;
+					margin-top: -22px;
+					color: white;
+					font-weight: bold;
+					font-size: 18px;
+					transition: 0.6s ease;
+					border-radius: 0 3px 3px 0;
+					user-select: none;
+				}
+
+				/* Position the "next button" to the right */
+				.next {
+					right: 0;
+					border-radius: 3px 0 0 3px;
+				}
+
+				/* On hover, add a black background color with a little bit see-through */
+				.prev:hover, .next:hover {
+					background-color: rgba(0,0,0,0.8);
+				}
+
+				/* Caption text */
+				.text {
+							font-size: 21px;
+							padding: 10px 0px;
+							position: absolute;
+							bottom: 8px;
+							width: 100%;
+							background: rgba(255,255,255,0.6);
+							text-align: center;
+				}
+
+				.title_slide{
+							font-size: 30px;
+							font-weight: bold;
+				}
+
+				.desc_slide{
+					margin-top: 5px;
+				}
+
+				.img_slide{
+					max-height: 400px;
+					min-height: 400px;
+					max-width: 100%;
+				}
+
+				.full_slide{
+							width: 42px;
+							position: absolute;
+							top: 2px;
+							right: 2px;
+				}
+
+				/* Number text (1/3 etc) */
+				.numbertext {
+					color: #f2f2f2;
+					font-size: 12px;
+					padding: 8px 12px;
+					position: absolute;
+					top: 0;
+				}
+
+				/* The dots/bullets/indicators */
+				.dot {
+					cursor: pointer;
+					height: 15px;
+					width: 15px;
+					margin: 0 2px;
+					background-color: #bbb;
+					border-radius: 50%;
+					display: inline-block;
+					transition: background-color 0.6s ease;
+				}
+
+				.active, .dot:hover {
+					background-color: #717171;
+				}
+
+				/* Fading animation */
+				.fade {
+					-webkit-animation-name: fade;
+					-webkit-animation-duration: 1.5s;
+					animation-name: fade;
+					animation-duration: 1.5s;
+				}
+
+				@-webkit-keyframes fade {
+					from {opacity: .4} 
+					to {opacity: 1}
+				}
+
+				@keyframes fade {
+					from {opacity: .4} 
+					to {opacity: 1}
+				}
+
+				/* On smaller screens, decrease text size */
+				@media only screen and (max-width: 300px) {
+					.prev, .next,.text {font-size: 11px}
+				}
+				</style>
+
+				<div class="slideshow-container" id="slideshow">
+
+						<div class="mySlides fade">
+									<div class="numbertext">1 / 3</div>
+									<img class="img_slide" src="images/sample_1.png" >
+									<div class="text">
+										<p class="title_slide">Tung bung khuyen mai</p>
+											<p class="desc_slide">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+									</div>
+						</div>
+
+						<div class="mySlides fade">
+									<div class="numbertext">2 / 3</div>
+									<img class="img_slide" src="images/sample_2.png" >
+									<div class="text">
+										<p class="title_slide">Tung bung khuyen mai</p>
+										<p class="desc_slide">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+
+									</div>
+						</div>
+
+						<div class="mySlides fade">
+									<div class="numbertext">3 / 3</div>
+									<img class="img_slide" src="images/sample_4.jpeg" >
+									<div class="text">
+										<p class="title_slide">Tung bung khuyen mai</p>
+											<p class="desc_slide">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+									</div>
+						</div>
+
+						<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+						<a class="next" onclick="plusSlides(1)">&#10095;</a>
+						<img class="full_slide" src="images/full_icon.png">
+						
+				</div>
+
+				<br>
+
+				<div style="text-align:center">
+							<span class="dot" onclick="currentSlide(1)"></span> 
+							<span class="dot" onclick="currentSlide(2)"></span> 
+							<span class="dot" onclick="currentSlide(3)"></span> 
+				</div>
+
+				<script>
+
+					// var slideIndex = 0;
+					// showSlides();
+
+					// function showSlides() {
+					//   var i;
+					//   var slides = document.getElementsByClassName("mySlides");
+					//   for (i = 0; i < slides.length; i++) {
+					//     slides[i].style.display = "none"; 
+					//   }
+					//   slideIndex++;
+					//   if (slideIndex > slides.length) {slideIndex = 1} 
+					//   slides[slideIndex-1].style.display = "block"; 
+					//   setTimeout(showSlides, 100000); // Change image every 2 seconds
+					// }
+
+					var slideIndex = 1;
+					showSlides(slideIndex);
+
+					// Next/previous controls
+					function plusSlides(n) {
+						showSlides(slideIndex += n);
+					}
+
+					// Thumbnail image controls
+					function currentSlide(n) {
+						showSlides(slideIndex = n);
+					}
+
+					function showSlides(n) {
+						var i;
+						var slides = document.getElementsByClassName("mySlides");
+						var dots = document.getElementsByClassName("dot");
+						if (n > slides.length) {slideIndex = 1} 
+						if (n < 1) {slideIndex = slides.length}
+						for (i = 0; i < slides.length; i++) {
+								slides[i].style.display = "none"; 
+						}
+						for (i = 0; i < dots.length; i++) {
+								dots[i].className = dots[i].className.replace(" active", "");
+						}
+						slides[slideIndex-1].style.display = "block"; 
+						dots[slideIndex-1].className += " active";
+					}
+
+				</script>
+			
+			<!-- Slide Index-->
+
+			<h1>Một số thông báo</h1>
+			<div class="item_thongbao">
+				<p class="ten_thongbao">Thông báo dừng Server để bảo trì</p>
+				<p class="tac_gia">By quantri, 1 month ago</p>
+				<div class="content_thongbao">
+					<p>Gửi tất các Users!!<br>
+						Ngày 8/12 - 9/12 sẽ tạm ngừng server để bảo trì hệ thống nên mong các bạn thông cảm. <br>Ngày 10/12 sẽ hoạt động lại bình thường. <br>
+					Trân trọng</p>
+					<a href="">Đọc thêm</a>
+				</div>
+				<div class="mota_thongbao">
+					<p>By quantri, 1 month ago, 0 comment(s)</p>
+				</div>
+			</div>
+
+			<div class="item_thongbao">
+				<p class="ten_thongbao">Thông báo dừng Server để bảo trì 2</p>
+				<p class="tac_gia">By quantri, 1 month ago</p>
+				<div class="content_thongbao">
+					<p>Gửi tất các Users!!<br>
+						Ngày 8/12 - 9/12 sẽ tạm ngừng server để bảo trì hệ thống nên mong các bạn thông cảm. <br>Ngày 10/12 sẽ hoạt động lại bình thường.<br>
+					Trân trọng</p>
+					<a href="">Đọc thêm</a>
+				</div>
+				<div class="mota_thongbao">
+					<p>By quantri, 1 month ago, 0 comment(s)</p>
+				</div>
+			</div>
+
+
+		</div>
+
+
+		<div class="clr"></div>
+
+		<div class="footer">
+			<p style="background: white !important">MiniMark - Code by Bay Nguyen 2018<br>
+				University of Science and Technology - University of Danang<br>
+				Server time: 16/01/2019 00:17:15 (UTC+7)<br>
+			</p>
+		</div>
+
+
+	</div>
+
+</body>
+</html>
